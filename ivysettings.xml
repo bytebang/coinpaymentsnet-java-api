@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ivysettings>
+<ivysettings>
+	<properties file="build.properties" />
+	<settings defaultResolver="default-chain"/>
+	<resolvers>
+	
+		<ibiblio name="jboss" root="http://repository.jboss.org/" m2compatible="true"/>
+		<ibiblio name="ibilio" m2compatible="true"/>
+		<ibiblio name="eclipsepaho" root="https://repo.eclipse.org/content/repositories/paho-releases/" m2compatible="true"/>
+
+		<chain name="default-chain">
+			<resolver ref="eclipsepaho"/>
+			<resolver ref="ibilio"/>
+			<resolver ref="jboss"/>
+		</chain>
+	</resolvers>
+</ivysettings>
