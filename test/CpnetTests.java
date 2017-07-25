@@ -106,7 +106,7 @@ public class CpnetTests
 		JsonObject txinfo = api.set("txid", CpnetTests.transactionId).call("get_tx_info");
 		assertTrue(txinfo != null);
 		
-		// Lokk if something has been paid already
+		// Look if something has been paid already
 		float amount = txinfo.get("amountf").getAsFloat();
 		float received = txinfo.get("receivedf").getAsFloat();
 		float remeaning = amount - received;
